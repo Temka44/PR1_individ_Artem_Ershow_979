@@ -1,0 +1,57 @@
+<!doctype>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Пятнашки</title>
+</head>
+<body>
+<center id="m15"></center>
+<script type="text/javascript">
+function igra (ev)
+{
+var e = ev || window.event, o = e.target || e.srcElement; if (o.tagName != 'INPUT') return;
+var obj = document.getElementById ('m15'), btn = obj.getElementsByTagName ('input'),
+t = o.lang.split ('-'), r = t [0] * 1, c = t [1] * 1, ce = ro = -1;
+for (var j = 0; j < 4; j++)
+        if (btn [4 * r + j].value < 0) {ce = j; break}
+   else if (btn [4 * j + c].value < 0) {ro = j; break}
+if (ro * ce == 1) return;
+if (ce != -1)
+   {
+   btn [r * 4 + ce].style.visibility = 'visible';
+   if (ce > c) for (var j = ce; j > c; j--) btn [r * 4 + j].value = btn [r * 4 + j - 1].value;
+          else for (var j = ce; j < c; j++) btn [r * 4 + j].value = btn [r * 4 + j + 1].value;
+   }
+if (ro != -1)
+   {
+   btn [ro * 4 + c].style.visibility = 'visible';
+   if (ro > r) for (j = ro; j > r; j--) btn [j * 4 + c].value = btn [4 * j - 4 + c].value;
+          else for (j = ro; j < r; j++) btn [j * 4 + c].value = btn [4 * j + 4 + c].value;
+   }
+o.style.visibility = 'hidden'; o.value = -1;
+for (j = 0; j < 15; j++) if (btn [j].value != j + 1) return;
+obj.onclick = null; alert ('Головоломка решена! Поздравляю!');
+}
+ 
+(function ()
+{
+var shb = document.createElement ('input'); shb.type = 'button';
+shb.style.cssText = 'height: 100px; width: 100px; font-weight: bold; font-size: 30px ';
+var obj = document.getElementById ('m15'), rnd = new Array (), rsh = 1; obj.onclick = igra;
+while (rsh % 2)
+   {
+   for (var j = 0; j < 15; j++) rnd [j] = j + 1;
+   rnd.sort (new Function ('x, y', 'return Math.random () - Math.random ()'));
+   for (var rsh = j = 0; j < 14; rsh += s, j++)
+      for (var s = 0, k = j + 1; k < 15; k++) if (rnd [k] < rnd [j]) s++;
+   }
+for (j = 0; j < 4; obj.appendChild (document.createElement ('br')), j++) for (k = 0; k < 4; k++)
+   {
+   var btn = obj.appendChild (shb.cloneNode (1)); btn.lang = j + '-' + k;
+   var t = j * 4 + k; if (t < 15) btn.value = rnd [t];
+   }
+btn.style.visibility = 'hidden'; btn.value = -1;
+}) ();
+</script>
+</body>
+</html>
