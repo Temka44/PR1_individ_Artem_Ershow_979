@@ -1,108 +1,13 @@
-<script>
-var a1 = Math.floor(Math.random()*15 + 1);
-var a2 = Math.floor(Math.random()*15 + 1);
-mismatch(2);
-var a3 = Math.floor(Math.random()*15 + 1);
-mismatch(3);
-var a4 = Math.floor(Math.random()*15 + 1);
-mismatch(4);
-var a5 = Math.floor(Math.random()*15 + 1);
-mismatch(5);
-var a6 = Math.floor(Math.random()*15 + 1);
-mismatch(6);
-var a7 = Math.floor(Math.random()*15 + 1);
-mismatch(7);
-var a8 = Math.floor(Math.random()*15 + 1);
-mismatch(8);
-var a9 = Math.floor(Math.random()*15 + 1);
-mismatch(9);
-var a10 = Math.floor(Math.random()*15 + 1);
-mismatch(10);
-var a11 = Math.floor(Math.random()*15 + 1);
-mismatch(11);
-var a12 = Math.floor(Math.random()*15 + 1);
-mismatch(12);
-var a13 = Math.floor(Math.random()*15 + 1);
-mismatch(13);
-var a14 = Math.floor(Math.random()*15 + 1);
-mismatch(14);
-var a15 = Math.floor(Math.random()*15 + 1);
-mismatch(15);
-var a16 = ' ';
-
-function mismatch(n){
-        for (var i=1;i<n;i++){
-                if(window['a'+n]==window['a'+i]){
-                        window['a'+n]=Math.floor(Math.random()*15 + 1);
-                        i=0;
-                }
-        }       
-}
-
-var a;
-var b;
-var с = ' ';
-function an(){
-        document.getElementById('td'+b).innerHTML=window["a"+a];document.getElementById('td'+b).style.background = '#DEB887';
-        window["a"+b]=window["a"+a];
-        }
-function ap(){
-        document.getElementById('td'+a).innerHTML=с;document.getElementById('td'+a).style.background = '#FFF5EE';
-        window["a"+a]=с
-        }
-</script>
-
-<table align="center" bgcolor="#FFF5EE" border="0" bordercolor="#F8F8FF" height="400px" width="400px">
-<tr align="center">
-<td bgcolor="#DEB887" width="80px" id="td1" onclick="if(window['a5']==с){a=1;b=5;an();ap();}if(window['a2']==с){a=1;b=2;an();ap();}">
-        <script>document.write(a1);</script></td>
-<td bgcolor="#DEB887" width="80px" id="td2" onclick="if(window['a1']==с){a=2;b=1;an();ap();}if(window['a6']==с){a=2;b=6;an();ap();}
-        if(window['a3']==с){a=2;b=3;an();ap();}">
-        <script>document.write(a2);</script></td>
-<td bgcolor="#DEB887" width="80px" id="td3" onclick="if(window['a2']==с){a=3;b=2;an();ap();}if(window['a4']==с){a=3;b=4;an();ap();}
-        if(window['a7']==с){a=3;b=7;an();ap();}">
-        <script>document.write(a3);</script></td>
-<td bgcolor="#DEB887" width="80px" id="td4" onclick="if(window['a3']==с){a=4;b=3;an();ap();}if(window['a8']==с){a=4;b=8;an();ap();}">
-        <script>document.write(a4);</script></td>
-</tr>
-<tr align="center">
-<td bgcolor="#DEB887" id="td5" onclick="if(window['a1']==с){a=5;b=1;an();ap();}if(window['a6']==с){a=5;b=6;an();ap();}
-        if(window['a9']==с){a=5;b=9;an();ap();}">
-        <script>document.write(a5);</script></td>
-<td bgcolor="#DEB887" id="td6" onclick="if(window['a2']==с){a=6;b=2;an();ap();}if(window['a5']==с){a=6;b=5;an();ap();}
-        if(window['a7']==с){a=6;b=7;an();ap();}if(window['a10']==с){a=6;b=10;an();ap();}">
-        <script>document.write(a6);</script></td>
-<td bgcolor="#DEB887" id="td7" onclick="if(window['a3']==с){a=7;b=3;an();ap();}if(window['a6']==с){a=7;b=6;an();ap();}
-        if(window['a8']==с){a=7;b=8;an();ap();}if(window['a11']==с){a=7;b=11;an();ap();}">
-        <script>document.write(a7);</script></td>
-<td bgcolor="#DEB887" id="td8" onclick="if(window['a4']==с){a=8;b=4;an();ap();}if(window['a7']==с){a=8;b=7;an();ap();}
-        if(window['a12']==с){a=8;b=12;an();ap();}">
-        <script>document.write(a8);</script></td>
-</tr>
-<tr align="center">
-<td bgcolor="#DEB887" id="td9" onclick="if(window['a5']==с){a=9;b=5;an();ap();}if(window['a10']==с){a=9;b=10;an();ap();}
-        if(window['a13']==с){a=9;b=13;an();ap();}">
-        <script>document.write(a9);</script></td>
-<td bgcolor="#DEB887" id="td10" onclick="if(window['a6']==с){a=10;b=6;an();ap();}if(window['a9']==с){a=10;b=9;an();ap();}
-        if(window['a11']==с){a=10;b=11;an();ap();}if(window['a14']==с){a=10;b=14;an();ap();}">
-        <script>document.write(a10);</script></td>
-<td bgcolor="#DEB887" id="td11" onclick="if(window['a7']==с){a=11;b=7;an();ap();}if(window['a10']==с){a=11;b=10;an();ap();}
-        if(window['a12']==с){a=11;b=12;an();ap();}if(window['a15']==с){a=11;b=15;an();ap();}">
-        <script>document.write(a11);</script></td>
-<td bgcolor="#DEB887" id="td12" onclick="if(window['a8']==с){a=12;b=8;an();ap();}if(window['a11']==с){a=12;b=11;an();ap();}
-        if(window['a16']==с){a=12;b=16;an();ap();}">
-        <script>document.write(a12);</script></td>
-</tr>
-<tr align="center">
-<td bgcolor="#DEB887" id="td13" onclick="if(window['a9']==с){a=13;b=9;an();ap();}if(window['a14']==с){a=13;b=14;an();ap();}">
-        <script>document.write(a13);</script></td>
-<td bgcolor="#DEB887" id="td14" onclick="if(window['a10']==с){a=14;b=10;an();ap();}if(window['a13']==с){a=14;b=13;an();ap();}
-        if(window['a15']==с){a=14;b=15;an();ap();}">
-        <script>document.write(a14);</script></td>
-<td bgcolor="#DEB887" id="td15" onclick="if(window['a11']==с){a=15;b=11;an();ap();}if(window['a14']==с){a=15;b=14;an();ap();}
-        if(window['a16']==с){a=15;b=16;an();ap();}">
-        <script>document.write(a15);</script></td>
-<td bgcolor="#FFF5EE" id="td16" onclick="if(window['a12']==с){a=16;b=12;an();ap();}if(window['a15']==с){a=16;b=15;an();ap();}"></td>
-</tr>
-</table>
-</center>
+<html>
+	<head>
+		<title>Пятнашки</title>	
+		<script type="text/javascript" src="15.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	
+	<body>	
+		<div id="box"></div> 
+		<button id="reset">Новая игра</div>
+	</body>
+	
+</html>
